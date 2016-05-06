@@ -1,0 +1,408 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9CDD95966D8BB341DC6889D5 /* Pods_AudioTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCA73A4FF0DC00AA67FEC1F5 /* Pods_AudioTable.framework */; };
+		BE5718461CDBC18A0018C7AF /* RecordingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5718441CDBC18A0018C7AF /* RecordingCell.swift */; };
+		BE5718471CDBC18A0018C7AF /* RecordingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE5718451CDBC18A0018C7AF /* RecordingCell.xib */; };
+		BE75FA2F1CDBD5BB00CBB4D4 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE75FA2E1CDBD5BB00CBB4D4 /* EditViewController.swift */; };
+		EC7B23D21CB6A93800940404 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7B23D11CB6A93800940404 /* AppDelegate.swift */; };
+		EC7B23D41CB6A93800940404 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7B23D31CB6A93800940404 /* ViewController.swift */; };
+		EC7B23D71CB6A93800940404 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC7B23D51CB6A93800940404 /* Main.storyboard */; };
+		EC7B23DA1CB6A93800940404 /* AudioTable.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC7B23D81CB6A93800940404 /* AudioTable.xcdatamodeld */; };
+		EC7B23DC1CB6A93800940404 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC7B23DB1CB6A93800940404 /* Assets.xcassets */; };
+		EC7B23DF1CB6A93800940404 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC7B23DD1CB6A93800940404 /* LaunchScreen.storyboard */; };
+		EC7B23E71CB6AFE400940404 /* AudioTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7B23E61CB6AFE400940404 /* AudioTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4367461D77C65475C44DE02D /* Pods-AudioTable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioTable.release.xcconfig"; path = "Pods/Target Support Files/Pods-AudioTable/Pods-AudioTable.release.xcconfig"; sourceTree = "<group>"; };
+		5B29992778013F5FAB9C73CB /* Pods-AudioTable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioTable.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AudioTable/Pods-AudioTable.debug.xcconfig"; sourceTree = "<group>"; };
+		BE5718441CDBC18A0018C7AF /* RecordingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingCell.swift; sourceTree = "<group>"; };
+		BE5718451CDBC18A0018C7AF /* RecordingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordingCell.xib; sourceTree = "<group>"; };
+		BE75FA2E1CDBD5BB00CBB4D4 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditViewController.swift; path = ../EditViewController.swift; sourceTree = "<group>"; };
+		EC7B23CE1CB6A93800940404 /* AudioTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC7B23D11CB6A93800940404 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EC7B23D31CB6A93800940404 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EC7B23D61CB6A93800940404 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EC7B23D91CB6A93800940404 /* AudioTable.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AudioTable.xcdatamodel; sourceTree = "<group>"; };
+		EC7B23DB1CB6A93800940404 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC7B23DE1CB6A93800940404 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EC7B23E01CB6A93800940404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC7B23E61CB6AFE400940404 /* AudioTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioTableViewController.swift; sourceTree = "<group>"; };
+		FCA73A4FF0DC00AA67FEC1F5 /* Pods_AudioTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AudioTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC7B23CB1CB6A93800940404 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CDD95966D8BB341DC6889D5 /* Pods_AudioTable.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		97CC74AA2B942B81F35107F2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5B29992778013F5FAB9C73CB /* Pods-AudioTable.debug.xcconfig */,
+				4367461D77C65475C44DE02D /* Pods-AudioTable.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AA36BBED967983B41E366C8F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCA73A4FF0DC00AA67FEC1F5 /* Pods_AudioTable.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC7B23C51CB6A93800940404 = {
+			isa = PBXGroup;
+			children = (
+				EC7B23D01CB6A93800940404 /* AudioTable */,
+				EC7B23CF1CB6A93800940404 /* Products */,
+				97CC74AA2B942B81F35107F2 /* Pods */,
+				AA36BBED967983B41E366C8F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EC7B23CF1CB6A93800940404 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC7B23CE1CB6A93800940404 /* AudioTable.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC7B23D01CB6A93800940404 /* AudioTable */ = {
+			isa = PBXGroup;
+			children = (
+				EC7B23D11CB6A93800940404 /* AppDelegate.swift */,
+				BE75FA2E1CDBD5BB00CBB4D4 /* EditViewController.swift */,
+				EC7B23D31CB6A93800940404 /* ViewController.swift */,
+				EC7B23D51CB6A93800940404 /* Main.storyboard */,
+				EC7B23DB1CB6A93800940404 /* Assets.xcassets */,
+				EC7B23DD1CB6A93800940404 /* LaunchScreen.storyboard */,
+				EC7B23E01CB6A93800940404 /* Info.plist */,
+				EC7B23D81CB6A93800940404 /* AudioTable.xcdatamodeld */,
+				EC7B23E61CB6AFE400940404 /* AudioTableViewController.swift */,
+				BE5718441CDBC18A0018C7AF /* RecordingCell.swift */,
+				BE5718451CDBC18A0018C7AF /* RecordingCell.xib */,
+			);
+			path = AudioTable;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC7B23CD1CB6A93800940404 /* AudioTable */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC7B23E31CB6A93800940404 /* Build configuration list for PBXNativeTarget "AudioTable" */;
+			buildPhases = (
+				927BEBB6DD713B5D8323AC79 /* Check Pods Manifest.lock */,
+				EC7B23CA1CB6A93800940404 /* Sources */,
+				EC7B23CB1CB6A93800940404 /* Frameworks */,
+				EC7B23CC1CB6A93800940404 /* Resources */,
+				9D61B2848FB85C8DE5069A8E /* Embed Pods Frameworks */,
+				976E2096EA313F1D8E0AF597 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AudioTable;
+			productName = AudioTable;
+			productReference = EC7B23CE1CB6A93800940404 /* AudioTable.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC7B23C61CB6A93800940404 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Matthias Fabin";
+				TargetAttributes = {
+					EC7B23CD1CB6A93800940404 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = WB824S35DS;
+					};
+				};
+			};
+			buildConfigurationList = EC7B23C91CB6A93800940404 /* Build configuration list for PBXProject "AudioTable" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC7B23C51CB6A93800940404;
+			productRefGroup = EC7B23CF1CB6A93800940404 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC7B23CD1CB6A93800940404 /* AudioTable */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC7B23CC1CB6A93800940404 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC7B23DF1CB6A93800940404 /* LaunchScreen.storyboard in Resources */,
+				EC7B23DC1CB6A93800940404 /* Assets.xcassets in Resources */,
+				EC7B23D71CB6A93800940404 /* Main.storyboard in Resources */,
+				BE5718471CDBC18A0018C7AF /* RecordingCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		927BEBB6DD713B5D8323AC79 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		976E2096EA313F1D8E0AF597 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AudioTable/Pods-AudioTable-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D61B2848FB85C8DE5069A8E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AudioTable/Pods-AudioTable-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC7B23CA1CB6A93800940404 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC7B23D41CB6A93800940404 /* ViewController.swift in Sources */,
+				EC7B23DA1CB6A93800940404 /* AudioTable.xcdatamodeld in Sources */,
+				BE75FA2F1CDBD5BB00CBB4D4 /* EditViewController.swift in Sources */,
+				EC7B23E71CB6AFE400940404 /* AudioTableViewController.swift in Sources */,
+				BE5718461CDBC18A0018C7AF /* RecordingCell.swift in Sources */,
+				EC7B23D21CB6A93800940404 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EC7B23D51CB6A93800940404 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC7B23D61CB6A93800940404 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EC7B23DD1CB6A93800940404 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC7B23DE1CB6A93800940404 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC7B23E11CB6A93800940404 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EC7B23E21CB6A93800940404 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC7B23E41CB6A93800940404 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B29992778013F5FAB9C73CB /* Pods-AudioTable.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = AudioTable/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ja.AudioTable;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EC7B23E51CB6A93800940404 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4367461D77C65475C44DE02D /* Pods-AudioTable.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = AudioTable/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ja.AudioTable;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC7B23C91CB6A93800940404 /* Build configuration list for PBXProject "AudioTable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC7B23E11CB6A93800940404 /* Debug */,
+				EC7B23E21CB6A93800940404 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC7B23E31CB6A93800940404 /* Build configuration list for PBXNativeTarget "AudioTable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC7B23E41CB6A93800940404 /* Debug */,
+				EC7B23E51CB6A93800940404 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EC7B23D81CB6A93800940404 /* AudioTable.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EC7B23D91CB6A93800940404 /* AudioTable.xcdatamodel */,
+			);
+			currentVersion = EC7B23D91CB6A93800940404 /* AudioTable.xcdatamodel */;
+			path = AudioTable.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EC7B23C61CB6A93800940404 /* Project object */;
+}

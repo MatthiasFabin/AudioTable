@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecordingCell" id="KGk-i7-Jjw" customClass="RecordingCell" customModule="AudioTable" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DQM-Gn-UV6">
+                        <rect key="frame" x="8" y="8" width="304" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                        <connections>
+                            <action selector="hideKeyboard:" destination="KGk-i7-Jjw" eventType="editingDidEndOnExit" id="E1D-gc-Slz"/>
+                            <outlet property="delegate" destination="KGk-i7-Jjw" id="T8u-hC-r0o"/>
+                        </connections>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="DQM-Gn-UV6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="Ezb-xV-48L"/>
+                    <constraint firstItem="DQM-Gn-UV6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Hus-wd-dwL"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="DQM-Gn-UV6" secondAttribute="bottom" constant="-2" id="dJP-et-6it"/>
+                    <constraint firstItem="DQM-Gn-UV6" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="nyK-9Z-etO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="recordingTitleLabel" destination="DQM-Gn-UV6" id="CC0-YQ-v4S"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

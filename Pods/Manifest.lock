@@ -1,0 +1,13 @@
+PODS:
+  - AudioKit (3.1.2)
+  - MGSwipeTableCell (1.5.5)
+
+DEPENDENCIES:
+  - AudioKit
+  - MGSwipeTableCell
+
+SPEC CHECKSUMS:
+  AudioKit: 39a1b9e8f33c2af9a8b5de6e97b0d595effe4c5c
+  MGSwipeTableCell: bafeb5f351124544c9364ecbdf24c7b06a37d340
+
+COCOAPODS: 0.39.0
