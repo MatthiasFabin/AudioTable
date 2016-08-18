@@ -86,7 +86,6 @@ class AudioTableViewController: UITableViewController, UINavigationControllerDel
             (sender: MGSwipeTableCell!) -> Bool in
             self.recordsToEdit = cell.recordingTitleLabel!.text!
             self.performSegueWithIdentifier("editSeque", sender: nil)
-            print("Convenience callback for swipe buttons!")
             return true
         })
 

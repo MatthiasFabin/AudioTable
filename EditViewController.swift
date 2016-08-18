@@ -37,6 +37,8 @@ class EditViewController: UIViewController {
     
     @IBOutlet weak var gainSlider: UISlider!
     
+    var audioRecorder: AKNodeRecorder!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -44,6 +46,8 @@ class EditViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         self.navigationItem.title = "Edit"
         configureAudioKit()
+        
+        setupRecording()
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -157,10 +161,14 @@ class EditViewController: UIViewController {
     
     @IBAction func play(sender: UIButton) {
        player.play()
+        
+        try! audioRecorder.record()
     }
     
     @IBAction func stop(sender: UIButton) {
         player.stop()
+        
+        audioRecorder.stop()
     }
     
     @IBAction func process(sender: UIButton) {
@@ -173,5 +181,25 @@ class EditViewController: UIViewController {
     
     @IBAction func gain(sender: UISlider) {
         gain.gain = Double (sender.value)
+    }
+    
+    func setupRecording() {
+        guard let directoryURL = NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask).first else {
+            
+            let alertMessage = UIAlertController(title: "Error", message: "Failed to to save edited audio!", preferredStyle: .Alert)
+            alertMessage.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            self.presentViewController(alertMessage, animated: true, completion: nil)
+            
+            return
+        }
+        
+        // Set the default audio file
+        
+        
+        //let audioFile = AKAudio
+        
+        let audioFileURL = directoryURL.URLByAppendingPathComponent(self.fileName)
+
+        audioRecorder = AKNodeRecorder.init(audioFileURL.path!, node: AudioKit.output!)
     }
 }

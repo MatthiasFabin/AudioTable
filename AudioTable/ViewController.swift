@@ -229,8 +229,6 @@ class ViewController: UIViewController,AVAudioRecorderDelegate, AVAudioPlayerDel
                         audioRecorder?.meteringEnabled = true
                         audioRecorder?.prepareToRecord()
                         
-                        audioRecorder.
-                        
                         audioRecorder?.record()
                         recordButton.selected = true
                         counter = 0

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AudioTable/AudioTableViewController.swift"
-            timestampString = "484171436.91221"
+            timestampString = "493200090.078641"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "248"
-            endingLineNumber = "248"
+            startingLineNumber = "247"
+            endingLineNumber = "247"
             landmarkName = "AudioTableViewController"
             landmarkType = "3">
          </BreakpointContent>
