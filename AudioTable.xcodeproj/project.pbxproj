@@ -11,11 +11,14 @@
 		BE5718461CDBC18A0018C7AF /* RecordingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5718441CDBC18A0018C7AF /* RecordingCell.swift */; };
 		BE5718471CDBC18A0018C7AF /* RecordingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE5718451CDBC18A0018C7AF /* RecordingCell.xib */; };
 		BE75FA2F1CDBD5BB00CBB4D4 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE75FA2E1CDBD5BB00CBB4D4 /* EditViewController.swift */; };
+		EC26DD5B1CE11CEB0028F5AE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC26DD5A1CE11CEB0028F5AE /* MainViewController.swift */; };
+		EC26DD5D1CE13E770028F5AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC26DD5C1CE13E770028F5AE /* Assets.xcassets */; };
+		EC26DD601CE214B90028F5AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC26DD5E1CE214B90028F5AE /* Main.storyboard */; };
+		EC7659BF1CF8A0BD00A7A537 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7659BE1CF8A0BD00A7A537 /* MessageUI.framework */; };
+		EC77A1D01CE219140080F07D /* AudioTableSendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77A1CF1CE219140080F07D /* AudioTableSendViewController.swift */; };
 		EC7B23D21CB6A93800940404 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7B23D11CB6A93800940404 /* AppDelegate.swift */; };
 		EC7B23D41CB6A93800940404 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7B23D31CB6A93800940404 /* ViewController.swift */; };
-		EC7B23D71CB6A93800940404 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC7B23D51CB6A93800940404 /* Main.storyboard */; };
 		EC7B23DA1CB6A93800940404 /* AudioTable.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC7B23D81CB6A93800940404 /* AudioTable.xcdatamodeld */; };
-		EC7B23DC1CB6A93800940404 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC7B23DB1CB6A93800940404 /* Assets.xcassets */; };
 		EC7B23DF1CB6A93800940404 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC7B23DD1CB6A93800940404 /* LaunchScreen.storyboard */; };
 		EC7B23E71CB6AFE400940404 /* AudioTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7B23E61CB6AFE400940404 /* AudioTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -26,12 +29,15 @@
 		BE5718441CDBC18A0018C7AF /* RecordingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingCell.swift; sourceTree = "<group>"; };
 		BE5718451CDBC18A0018C7AF /* RecordingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordingCell.xib; sourceTree = "<group>"; };
 		BE75FA2E1CDBD5BB00CBB4D4 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditViewController.swift; path = ../EditViewController.swift; sourceTree = "<group>"; };
+		EC26DD5A1CE11CEB0028F5AE /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ../MainViewController.swift; sourceTree = "<group>"; };
+		EC26DD5C1CE13E770028F5AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC26DD5F1CE214B90028F5AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EC7659BE1CF8A0BD00A7A537 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		EC77A1CF1CE219140080F07D /* AudioTableSendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioTableSendViewController.swift; sourceTree = "<group>"; };
 		EC7B23CE1CB6A93800940404 /* AudioTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC7B23D11CB6A93800940404 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC7B23D31CB6A93800940404 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EC7B23D61CB6A93800940404 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC7B23D91CB6A93800940404 /* AudioTable.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AudioTable.xcdatamodel; sourceTree = "<group>"; };
-		EC7B23DB1CB6A93800940404 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC7B23DE1CB6A93800940404 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC7B23E01CB6A93800940404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC7B23E61CB6AFE400940404 /* AudioTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioTableViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC7659BF1CF8A0BD00A7A537 /* MessageUI.framework in Frameworks */,
 				9CDD95966D8BB341DC6889D5 /* Pods_AudioTable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +69,7 @@
 		AA36BBED967983B41E366C8F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EC7659BE1CF8A0BD00A7A537 /* MessageUI.framework */,
 				FCA73A4FF0DC00AA67FEC1F5 /* Pods_AudioTable.framework */,
 			);
 			name = Frameworks;
@@ -88,17 +96,19 @@
 		EC7B23D01CB6A93800940404 /* AudioTable */ = {
 			isa = PBXGroup;
 			children = (
-				EC7B23D11CB6A93800940404 /* AppDelegate.swift */,
-				BE75FA2E1CDBD5BB00CBB4D4 /* EditViewController.swift */,
+				EC26DD5E1CE214B90028F5AE /* Main.storyboard */,
+				EC26DD5A1CE11CEB0028F5AE /* MainViewController.swift */,
 				EC7B23D31CB6A93800940404 /* ViewController.swift */,
-				EC7B23D51CB6A93800940404 /* Main.storyboard */,
-				EC7B23DB1CB6A93800940404 /* Assets.xcassets */,
+				BE75FA2E1CDBD5BB00CBB4D4 /* EditViewController.swift */,
+				EC7B23E61CB6AFE400940404 /* AudioTableViewController.swift */,
+				EC77A1CF1CE219140080F07D /* AudioTableSendViewController.swift */,
+				BE5718441CDBC18A0018C7AF /* RecordingCell.swift */,
+				BE5718451CDBC18A0018C7AF /* RecordingCell.xib */,
+				EC7B23D11CB6A93800940404 /* AppDelegate.swift */,
+				EC26DD5C1CE13E770028F5AE /* Assets.xcassets */,
 				EC7B23DD1CB6A93800940404 /* LaunchScreen.storyboard */,
 				EC7B23E01CB6A93800940404 /* Info.plist */,
 				EC7B23D81CB6A93800940404 /* AudioTable.xcdatamodeld */,
-				EC7B23E61CB6AFE400940404 /* AudioTableViewController.swift */,
-				BE5718441CDBC18A0018C7AF /* RecordingCell.swift */,
-				BE5718451CDBC18A0018C7AF /* RecordingCell.xib */,
 			);
 			path = AudioTable;
 			sourceTree = "<group>";
@@ -138,7 +148,7 @@
 				TargetAttributes = {
 					EC7B23CD1CB6A93800940404 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = WB824S35DS;
+						DevelopmentTeam = H9DP2TPRR5;
 					};
 				};
 			};
@@ -166,9 +176,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC7B23DF1CB6A93800940404 /* LaunchScreen.storyboard in Resources */,
-				EC7B23DC1CB6A93800940404 /* Assets.xcassets in Resources */,
-				EC7B23D71CB6A93800940404 /* Main.storyboard in Resources */,
+				EC26DD5D1CE13E770028F5AE /* Assets.xcassets in Resources */,
 				BE5718471CDBC18A0018C7AF /* RecordingCell.xib in Resources */,
+				EC26DD601CE214B90028F5AE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +237,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC77A1D01CE219140080F07D /* AudioTableSendViewController.swift in Sources */,
+				EC26DD5B1CE11CEB0028F5AE /* MainViewController.swift in Sources */,
 				EC7B23D41CB6A93800940404 /* ViewController.swift in Sources */,
 				EC7B23DA1CB6A93800940404 /* AudioTable.xcdatamodeld in Sources */,
 				BE75FA2F1CDBD5BB00CBB4D4 /* EditViewController.swift in Sources */,
@@ -239,10 +251,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EC7B23D51CB6A93800940404 /* Main.storyboard */ = {
+		EC26DD5E1CE214B90028F5AE /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EC7B23D61CB6A93800940404 /* Base */,
+				EC26DD5F1CE214B90028F5AE /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -346,10 +358,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AudioTable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ja.AudioTable;
+				PRODUCT_BUNDLE_IDENTIFIER = com.REVoice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -361,10 +375,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AudioTable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ja.AudioTable;
+				PRODUCT_BUNDLE_IDENTIFIER = com.REVoice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

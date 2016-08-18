@@ -1,5 +1,5 @@
 //
-//  AudioTableViewController.swift
+//  AudioTableSendViewController.swift
 //  AudioTable
 //
 //  Created by Matthias Fabin on 07.04.2016.
@@ -12,38 +12,31 @@ import Foundation
 import MGSwipeTableCell
 import MessageUI
 
-
-// do czego UINavigationControllerDelegate - przekazywanie danych między widokami ? 
-class AudioTableViewController: UITableViewController, UINavigationControllerDelegate, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
+class AudioTableSendViewController: UITableViewController, AVAudioRecorderDelegate, AVAudioPlayerDelegate, MFMailComposeViewControllerDelegate {
     
-    // deklaracja zmiennej w której przechowywany jest plik wysylany do innego widoku
     var recordsToEdit:String?
-   
-   // deklaracja nazwy pliku
-    var fileName: String!
-    
-    // deklaracja adresu nagrań
     var recordings = [NSURL]()
+     var audioPlayer:AVAudioPlayer?
     
+    override func viewWillAppear(animated: Bool) {
+        self.navigationItem.title = "Library"
+    }
     
-    var audioPlayer:AVAudioPlayer?
-    //var audioRecorder:AVAudioRecorder?
-
-   
+    override func viewWillDisappear(animated: Bool) {
+        super.viewDidAppear(animated)
+        if let player = audioPlayer {
+            player.stop()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // odświeżanie tabeli
         tableView.reloadData()
-        
         listRecordings()
-  // plik nib opisuje element graficzny, w tym przypadku rejestrujemy plik nib zawierający komórkę tabeli wielokrotnego użytku
-    tableView.registerNib(UINib(nibName: "RecordingCell", bundle: nil), forCellReuseIdentifier: "RecordingCell")
         
+        tableView.registerNib(UINib(nibName: "RecordingCell", bundle: nil), forCellReuseIdentifier: "RecordingCell")
     }
     
-    // wysyłanie pliku do sceny edycji i nadanie mu nazwy recordsToEdit
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "editSeque" {
             let destinationVC = segue.destinationViewController as! EditViewController
@@ -52,21 +45,12 @@ class AudioTableViewController: UITableViewController, UINavigationControllerDel
         
     }
     
-    // programowanie komórek w tabeli
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        // dodanie komórki wielokrotnego użytku do tabeli
         let cell = tableView.dequeueReusableCellWithIdentifier("RecordingCell", forIndexPath: indexPath) as! RecordingCell
-        
-  // nadanie plikom w komórce nazwy według daty nagrania
+        //let cell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! RecordingCell
         cell.recordingTitleLabel!.text = recordings[indexPath.row].lastPathComponent
-  // przekazywanie danych z komórki ?
         cell.cellDelegate = self
-        
-        // stworzenie zmiennej potrzebnej do zmiany nazwy
         cell.oldName = recordings[indexPath.row].lastPathComponent
-        
-        // programowanie przycisków po swipe
         
         let a = MGSwipeButton(title: "Delete", backgroundColor: UIColor.redColor(), callback: {
             (sender: MGSwipeTableCell!) -> Bool in
@@ -81,30 +65,37 @@ class AudioTableViewController: UITableViewController, UINavigationControllerDel
             return true
         })
         
-        
-        let d = MGSwipeButton(title: "Edit", backgroundColor: UIColor.greenColor(), callback: {
+        let c = MGSwipeButton(title: "Share", backgroundColor: UIColor.greenColor(), callback: {
             (sender: MGSwipeTableCell!) -> Bool in
-            self.recordsToEdit = cell.recordingTitleLabel!.text!
-            self.performSegueWithIdentifier("editSeque", sender: nil)
-            print("Convenience callback for swipe buttons!")
+            
+            self.sendEmail(cell.recordingTitleLabel!.text!)
+            
+//            let defaultText = "Just checking in at "
+//
+//            let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first! as NSString
+//            let plistPath = paths.stringByAppendingPathComponent(cell.recordingTitleLabel!.text!)
+//            
+////            if let imageToShare = UIImage(named:
+////                self.restaurantImages[indexPath.row]) {
+//                let activityController = UIActivityViewController(activityItems:
+//                    [defaultText], applicationActivities: nil)
+//                self.presentViewController(activityController, animated: true,
+//                    completion: nil)
+////            }
             return true
         })
-
-        cell.rightButtons = [a, b, d]
+      
+        cell.rightButtons = [a, b, c,]
         
         return cell
     }
     
-    
-    // dziwnie zadeklarowana wczesniej funkcja, określamy co znajduje się w komórkach
     func listRecordings() {
         
         let documentsDirectory = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
         do {
             let urls = try NSFileManager.defaultManager().contentsOfDirectoryAtURL(documentsDirectory, includingPropertiesForKeys: nil, options: NSDirectoryEnumerationOptions.SkipsHiddenFiles)
-            
             self.recordings = urls.filter( { (name: NSURL) -> Bool in
-                // nazwa ostatniego elementu katalogu z sufixem m4a, skąd się wzięlo name. ?
                 return name.lastPathComponent!.hasSuffix("m4a")
             })
             
@@ -120,17 +111,6 @@ class AudioTableViewController: UITableViewController, UINavigationControllerDel
     }
     
     // MARK: - Table view data source
-    
-    override func viewWillAppear(animated: Bool) {
-        self.navigationItem.title = "Library"
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        super.viewDidAppear(animated)
-        if let player = audioPlayer {
-            player.stop()
-        }
-    }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -153,6 +133,7 @@ class AudioTableViewController: UITableViewController, UINavigationControllerDel
         }
     }
 
+    
     func removeOldFileIfExist(fileName: String) {
         let paths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
         if paths.count > 0 {
@@ -176,9 +157,9 @@ class AudioTableViewController: UITableViewController, UINavigationControllerDel
     
     func setupAudioPlayerWithFile(url: NSURL) -> AVAudioPlayer?  {
         //1
-//        let path = NSBundle.mainBundle().pathForResource(file as String, ofType: type as String)
-//        let url = NSURL.fileURLWithPath(path!)
-//        
+        //        let path = NSBundle.mainBundle().pathForResource(file as String, ofType: type as String)
+        //        let url = NSURL.fileURLWithPath(path!)
+        //
         //2
         var audioPlayer:AVAudioPlayer?
         
@@ -190,7 +171,6 @@ class AudioTableViewController: UITableViewController, UINavigationControllerDel
         }
         return audioPlayer
     }
-
     
     func renameFile(fileToRename: String, toName: String) {
         guard let directoryURL = NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask).first else {
@@ -215,11 +195,32 @@ class AudioTableViewController: UITableViewController, UINavigationControllerDel
             
         }
     }
+    
+    func sendEmail(fileName: String) {
+        let mailComposer = MFMailComposeViewController()
+        mailComposer.mailComposeDelegate = self
+        
+        //Set the subject and message of the email
+        mailComposer.setSubject("Speech Note")
+        mailComposer.setMessageBody("Hi, this is what I recorded for you.", isHTML: false)
+        mailComposer.setToRecipients([""])
+        
+       let docsDir = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
+            let fileManager = NSFileManager.defaultManager()
+            let filecontent = fileManager.contentsAtPath(docsDir + "/" + fileName)
+            mailComposer.addAttachmentData(filecontent!, mimeType: "audio/x-m4a", fileName: fileName)
+            
+        
+        self.presentViewController(mailComposer, animated: true, completion: nil)
+    }
+    
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+            dismissViewControllerAnimated(true, completion: nil)
+    }
 }
-
-
-extension AudioTableViewController: RecordingCellDelgate {
+extension AudioTableSendViewController: RecordingCellDelgate {
     func  recordingCell(cell: RecordingCell, finishEditingName newName: String) {
         renameFile(cell.oldName, toName: newName)
     }
+
 }
