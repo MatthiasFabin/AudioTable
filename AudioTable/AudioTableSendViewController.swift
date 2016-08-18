@@ -50,7 +50,7 @@ class AudioTableSendViewController: UITableViewController, AVAudioRecorderDelega
         //let cell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! RecordingCell
         cell.recordingTitleLabel!.text = recordings[indexPath.row].lastPathComponent
         cell.cellDelegate = self
-        cell.oldName = recordings[indexPath.row].lastPathComponent
+        cell.oldName = recordings[indexPath.row + 1].lastPathComponent
         
         let a = MGSwipeButton(title: "Delete", backgroundColor: UIColor.redColor(), callback: {
             (sender: MGSwipeTableCell!) -> Bool in
@@ -119,7 +119,7 @@ class AudioTableSendViewController: UITableViewController, AVAudioRecorderDelega
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return recordings.count
+        return recordings.count - 1
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

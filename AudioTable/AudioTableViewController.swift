@@ -59,7 +59,7 @@ class AudioTableViewController: UITableViewController, UINavigationControllerDel
         let cell = tableView.dequeueReusableCellWithIdentifier("RecordingCell", forIndexPath: indexPath) as! RecordingCell
         
   // nadanie plikom w komórce nazwy według daty nagrania
-        cell.recordingTitleLabel!.text = recordings[indexPath.row].lastPathComponent
+        cell.recordingTitleLabel!.text = recordings[indexPath.row + 1].lastPathComponent
   // przekazywanie danych z komórki ?
         cell.cellDelegate = self
         
@@ -139,7 +139,7 @@ class AudioTableViewController: UITableViewController, UINavigationControllerDel
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return recordings.count
+        return recordings.count - 1
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

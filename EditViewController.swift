@@ -22,7 +22,7 @@ class EditViewController: UIViewController {
     var parametricEQ6: AKParametricEQ!
     var highShelfFilter:  AKHighShelfFilter!
     var dynamicsProcessor: AKDynamicsProcessor!
-     var dynamicsProcessor2: AKDynamicsProcessor!
+    var dynamicsProcessor2: AKDynamicsProcessor!
     var peakLimiter: AKPeakLimiter!
     var fileName: String!
     var mixture: AKDryWetMixer!
@@ -46,13 +46,12 @@ class EditViewController: UIViewController {
         configureAudioKit()
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        AudioKit.stop()
     }
     
     func configureAudioKit() {
-     //   dispatch_async(dispatch_queue_create("startQueue", nil)) {
-            
             guard let directoryURL = NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask).first else {
                 
                 let alertMessage = UIAlertController(title: "Error", message: "Failed to get the document directory for recording the audio. Please try again later.", preferredStyle: .Alert)
@@ -88,7 +87,6 @@ class EditViewController: UIViewController {
                     self.view.addSubview(self.plot)
                 })
             }
-     //   }
     }
     
     func setParameters() {
