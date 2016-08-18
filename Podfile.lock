@@ -1,5 +1,5 @@
 PODS:
-  - AudioKit (3.1.2)
+  - AudioKit (3.1.3)
   - MGSwipeTableCell (1.5.5)
 
 DEPENDENCIES:
@@ -7,7 +7,7 @@ DEPENDENCIES:
   - MGSwipeTableCell
 
 SPEC CHECKSUMS:
-  AudioKit: 39a1b9e8f33c2af9a8b5de6e97b0d595effe4c5c
+  AudioKit: 7b7a16383c9ec8721d26a25a46c7326420ca1041
   MGSwipeTableCell: bafeb5f351124544c9364ecbdf24c7b06a37d340
 
 COCOAPODS: 0.39.0
